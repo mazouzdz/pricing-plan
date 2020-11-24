@@ -1,0 +1,45 @@
+@import "_reset";
+@import "_variables";
+
+h1{
+    text-align: center;
+    color: $bleuColor;
+    letter-spacing: 0.05rem;
+    padding: 1.2rem 0;
+    span{
+        text-transform: capitalize;
+        b{
+            font-weight: 800;
+        }
+    }
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .plan{
+        background-color: $whiteBG;
+        border-radius: 5px;
+        padding: 15px 30px;
+        text-align: center;
+        .title{
+            color: white;
+            text-transform: capitalize;
+            font-size: $titleSize;
+            font-weight: bolder;
+            letter-spacing: 0.08rem;
+            position: relative;
+        }
+        .title::after{
+            content: "";
+            width: 20%;
+            height: 4px;
+            background-color: $bleuColor;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin-left: -15px;
+        }
+    }
+}

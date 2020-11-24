@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap");
+body, ol, ul, html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #1a73e8;
+  letter-spacing: 0.05rem;
+  padding: 1.2rem 0;
+}
+
+h1 span {
+  text-transform: capitalize;
+}
+
+h1 span b {
+  font-weight: 800;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .plan {
+  background-color: rgba(126, 56, 56, 0.973);
+  border-radius: 5px;
+  padding: 15px 30px;
+  text-align: center;
+}
+
+.container .plan .title {
+  color: white;
+  text-transform: capitalize;
+  font-size: 25px;
+  font-weight: bolder;
+  letter-spacing: 0.08rem;
+  position: relative;
+}
+
+.container .plan .title::after {
+  content: "";
+  width: 20%;
+  height: 4px;
+  background-color: #1a73e8;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -15px;
+}
+/*# sourceMappingURL=styles.css.map */
