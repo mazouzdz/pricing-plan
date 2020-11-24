@@ -11,8 +11,7 @@ body {
 h1 {
   text-align: center;
   color: #1a73e8;
-  letter-spacing: 0.05rem;
-  padding: 1.2rem 0;
+  padding: 3.5rem 0;
 }
 
 h1 span {
@@ -20,10 +19,11 @@ h1 span {
 }
 
 h1 span b {
-  font-weight: 800;
+  font-weight: 900;
 }
 
 .container {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -37,29 +37,104 @@ h1 span b {
 }
 
 .container .plan {
-  background-color: rgba(126, 56, 56, 0.973);
+  background-color: rgba(231, 231, 231, 0.973);
   border-radius: 5px;
-  padding: 15px 30px;
+  width: 150px;
+  padding: 30px 20px;
   text-align: center;
+  -webkit-box-shadow: 0px 4px 20px #c3c3c3;
+          box-shadow: 0px 4px 20px #c3c3c3;
+  margin: 0px 20px;
 }
 
 .container .plan .title {
-  color: white;
+  margin: 08px 0 30px 0;
+  padding: 0;
+  color: black;
   text-transform: capitalize;
-  font-size: 25px;
-  font-weight: bolder;
+  font-size: 30px;
+  font-weight: 900;
   letter-spacing: 0.08rem;
   position: relative;
 }
 
 .container .plan .title::after {
   content: "";
-  width: 20%;
-  height: 4px;
+  width: 30px;
+  height: 2px;
   background-color: #1a73e8;
   position: absolute;
   bottom: 0;
   left: 50%;
   margin-left: -15px;
+}
+
+.container .plan .pricing {
+  font-size: 20px;
+  margin: 10px 0;
+  padding: 0;
+  font-weight: 600;
+}
+
+.container .plan .pricing .price {
+  color: #1a73e8;
+}
+
+.container .plan .sub-price {
+  padding: 0;
+  margin: 5px 0 15px 0;
+  font-size: 12px;
+}
+
+.container .plan .sub-price .bonus {
+  color: #1a73e8;
+}
+
+.container .plan .btn {
+  background-color: #1a73e8;
+  padding: 5px 2px;
+  margin: 0 auto;
+  color: white;
+  text-transform: capitalize;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  width: 100px;
+}
+
+.container .plan .red-btn {
+  background-color: #ec4848;
+}
+
+.container .active-plan {
+  color: white;
+  background: #0ceef6;
+  background: radial-gradient(circle, rgba(12, 238, 246, 0.53288) 0%, #40e3dd 56%, #2adbcb 100%);
+}
+
+.container .active-plan .title {
+  color: white;
+}
+
+.container .active-plan .title::after {
+  background-color: white;
+}
+
+.container .active-plan .btn {
+  border: 1px solid white;
+  background-color: transparent;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  bottom: 0;
+  right: -10px;
+  z-index: -10;
 }
 /*# sourceMappingURL=styles.css.map */

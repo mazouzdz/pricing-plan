@@ -1,45 +1,114 @@
 @import "_reset";
 @import "_variables";
 
-h1{
-    text-align: center;
-    color: $bleuColor;
-    letter-spacing: 0.05rem;
-    padding: 1.2rem 0;
-    span{
-        text-transform: capitalize;
-        b{
-            font-weight: 800;
-        }
+h1 {
+  text-align: center;
+  color: $bleuColor;
+  padding: 3.5rem 0;
+  span {
+    text-transform: capitalize;
+    b {
+      font-weight: 900;
     }
+  }
 }
 
-.container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    .plan{
-        background-color: $whiteBG;
-        border-radius: 5px;
-        padding: 15px 30px;
-        text-align: center;
-        .title{
-            color: white;
-            text-transform: capitalize;
-            font-size: $titleSize;
-            font-weight: bolder;
-            letter-spacing: 0.08rem;
-            position: relative;
-        }
-        .title::after{
-            content: "";
-            width: 20%;
-            height: 4px;
-            background-color: $bleuColor;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            margin-left: -15px;
-        }
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  .plan {
+    background-color: $whiteBG;
+    border-radius: 5px;
+    width: 150px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0px 4px 20px rgb(195, 195, 195);
+    margin: 0px 20px;
+    .title {
+      margin: 08px 0 30px 0;
+      padding: 0;
+      color: black;
+      text-transform: capitalize;
+      font-size: $titleSize;
+      font-weight: 900;
+      letter-spacing: 0.08rem;
+      position: relative;
     }
+    .title::after {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background-color: $bleuColor;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -15px;
+    }
+    .pricing {
+      font-size: 20px;
+      margin: 10px 0;
+      padding: 0;
+      font-weight: 600;
+      .price {
+        color: $bleuColor;
+      }
+    }
+    .sub-price {
+      padding: 0;
+      margin: 5px 0 15px 0;
+      font-size: 12px;
+      .bonus {
+        color: $bleuColor;
+      }
+    }
+    .btn {
+      background-color: $bleuColor;
+      padding: 5px 2px;
+      margin: 0 auto;
+      color: white;
+      text-transform: capitalize;
+      letter-spacing: 0.03em;
+      margin-bottom: 10px;
+      cursor: pointer;
+      border-radius: 4px;
+      border: none;
+      width: 100px;
+    }
+    .red-btn {
+      background-color: rgb(236, 72, 72);
+    }
+  }
+  .active-plan {
+    .title {
+      color: white;
+    }
+    .title::after {
+      background-color: white;
+    }
+    color: white;
+    background: rgb(12, 238, 246);
+    background: radial-gradient(
+      circle,
+      rgba(12, 238, 246, 0.5328798185941044) 0%,
+      rgba(64, 227, 221, 1) 56%,
+      rgba(42, 219, 203, 1) 100%
+    );
+    .btn {
+      border: 1px solid white;
+      background-color: transparent;
+    }
+  }
+}
+.container::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  //   background-color: rgba(255, 0, 0, 0.233);
+  bottom: 0;
+  right: -10px;
+  z-index: -10;
 }
